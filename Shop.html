@@ -3,9 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Products</title>
 </head>
 <body>
+  <header class="py-[20px] px-[100px] bg-orange-900 text-white max-md:hidden">
+    <div class="flex justify-between">
+
+      <div class="flex gap-16">
+        <h1><i class="fa fa-phone"></i> 123-456-7890</h1>
+        <h1><i class="fa fa-envelope"></i> contact@proelegance.com</h1>
+      </div>
+
+      <div class="flex gap-4">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR FOT DESKTOP -->
+  <nav class="flex justify-between px-[100px] py-8 shadow-lg max-md:hidden">
+    <a class="font-bold text-2xl" href="/Index.html">PRO'S ELEGANCE</a>
+    <ul class="flex gap-8">
+      <li><a class="text-lg" href="/Index.html">Home</a></li>
+      <li><a class="text-lg" href="/About.html">About</a></li>
+      <li><a class="text-lg" href="/Shop.html">Shop</a></li>
+      <li><a class="text-lg" href="/Testimonial.html">Testimonials</a></li>
+      <li><a class="text-lg" href="/FAQs.html">FAQs</a></li>
+      <li><a class="text-lg" href="/Contact.html">Contact</a></li>
+    </ul>
+   </nav>
+
+   <!-- NAVIGATION BAR FOR MOBILE -->
+    <nav class="flex justify-between px-2 py-4 shadow-lg md:hidden">
+      <a class="font-bold text-2xl" href="/Index.html">PRO'S ELEGANCE</a>
+      <button onclick="toggleMenu()"><i class="fa fa-bars text-2xl"></i></button>
+    </nav>
+
+    <!-- SIDE BAR FOR MOBILE -->
+     <div id="menu" class="fixed bottom-0 left-0 h-[100vh] w-full px-4 transform translate-y-full transition-transform duration-300 md:hidden z-50 bg-orange-400 text-white">
+      <button onclick="toggleMenu()" class="absolute top-4 right-4 font-bold text-3xl text-white">&times;</button>
+      <ul class="flex flex-col gap-6 mt-6 mx-4">
+        <li><a class="text-lg" href="/Index.html">Home</a></li>
+        <li><a class="text-lg" href="/About.html">About</a></li>
+        <li><a class="text-lg" href="/Shop.html">Shop</a></li>
+        <li><a class="text-lg" href="/Testimonial.html">Testimonials</a></li>
+        <li><a class="text-lg" href="/FAQs.html">FAQs</a></li>
+        <li><a class="text-lg" href="/Contact.html">Contact</a></li>
+      </ul>
+     </div>
+
+     <!-- HERO SECTION -->
+     <div class="bg-orange-50 md:px-[100px] py-16 max-md:px-4">
+      <h1 class="text-center font-bold text-2xl mb-8">PRODUCTS</h1>
+    </div> 
+
+    <div class="flex justify-between md:px-[110px] py-16 max-md:flex-col px-4 max-md:gap-6">
+      <p class="text-xl">Showing all 10 results</p>
+      <select class="p-4 border border-gray-400 rounded-lg">
+        <option>Default Sorting</option>
+        <option>Sort by Popularity</option>
+        <option>Sort by average rating</option>
+        <option>Sort by Latest</option>
+        <option>Sort by price: Low to high</option>
+        <option>Sort by price: High to low</option>
+      </select>
+    </div>
+
+    <section class="md:px-[110px] py-16">
+      <div id="card-menu" class="grid grid-cols-4 gap-6 max-md:grid-cols-1 max-md:gap-8 px-4"></div>
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <div class="md:px-[100px] py-16 max-md:px-2">
+
+      <div class="text-center gap-6 ">
+        <h1 class="text-center font-bold text-3xl my-2"> Subscribe to our newsletter to get updates to our latest collections</h1>
+        <p class="text-center text-xl">Get 20% off on your first order just by subscribing to our newsletter</p>
+        <input class="p-2 border border-orange-400 border-[2px] rounded-lg my-4" type="text" placeholder="Enter your Email">
+        <button class="p-[10px] bg-orange-400 text-white rounded-lg">Subscribe</button>
+        <p>You will be able to unsubscribe at anytime</p>
+        <p>Read our privacy policy <strong class="underline cursor-pointer">here</strong></p>
+      </div>
+
+     </div>
+
+
+  <!-- FOOTER -->
+   <footer class="md:px-[100px] bg-orange-900 text-white py-16 max-md:px-16">
+
+    <div class="flex justify-between gap-4 max-md:flex-col max-md:gap-6">
+
+      <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-xl">PRO'S ELEGANCE</h1>
+        <p class="max-w-[400px]">Discover the beauty of finely crafted braids, unique crochets, and luxurious perfumes. At Pro's Elegance and Fragrance, every product is a blend of passion and quality, designed to make you feel confident, beautiful, and unforgettable. Step into a world of handcrafted excellence and premium scents that define elegance.</p>
+      </div>
   
+      <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-xl">SHOP</h1>
+        <a href="">Specials</a>
+        <a href="">Wishlist</a>
+        <a href="">Onsales </a>
+        <a href="">Our Store </a>
+        <a href="">Trending </a>
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-xl">COMPANY</h1>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Testimonials </a>
+        <a href="">Blog </a>
+        <a href="">Contact </a>
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-xl">CONTACT</h1>
+        <a href="">Address:</a>
+        <a href="">6395 Inlet DrMayville</a>
+        <a href="">Contact No. </a>
+        <a href="">(716) 753-2183</a>
+        <a href="">(830) 281-4361</a>
+      </div>
+
+  
+    </div>
+  
+    <div class="text-center mt-16">
+      <h1> &copy; Copyright 2024, PRO'S ELEGANCE. All rights reserved.</h1>
+    </div>
+  
+
+   </footer>
+  
+
+  <script src="Products.js"></script>
+  <script src="Script.js"></script>
 </body>
 </html>
